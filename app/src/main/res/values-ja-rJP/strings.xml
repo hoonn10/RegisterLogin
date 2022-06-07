@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sound Sense</string>
+    <string name="home">自宅</string>
+    <string name="Calendar">履歴</string>
+    <string name="setting">設定</string>
+    <string name="logout">ログアウト</string>
+    <string name="tv_calendar">履歴</string>
+    <string name="contextEditText">内容を入力してください</string>
+    <string name="save_Btn">貯蔵</string>
+    <string name="cha_Btn">直す</string>
+    <string name="del_Btn">削除</string>
+    <string name="btn_login">ログイン</string>
+    <string name="btn_register">会員加入</string>
+    <string name="chk_login">自動ログイン</string>
+    <string name="et_pass">パスワード</string>
+    <string name="btn_main">非会員利用する</string>
+    <string name="textView8">"洗濯が終わりました"</string>
+    <string name="textView10">"玄関のベルが鳴っている"</string>
+    <string name="textView11">"火災報知機が鳴っている。"</string>
+    <string name="textView6">赤ちゃん泣きのお知らせ</string>
+    <string name="textView9">"赤ちゃんが泣いてる"</string>
+    <string name="laundary_alermtv">洗濯機の音通知</string>
+    <string name="bell_alermtv">ドアベル音通知</string>
+    <string name="fire_alermtv">火災警報音通知</string>
+    <string name="tv_vib1">振動周期:1番</string>
+    <string name="tv_vib2">振動周期:2番</string>
+    <string name="tv_vib3">振動周期:3回</string>
+    <string name="tv_vib4">振動周期:4番</string>
+    <string name="alerm_tv">お知らせ</string>
+    <string name="vibe_tv">振動世紀</string>
+    <string name="logout_tv">ログアウト</string>
+    <string name="logout_btn">ログアウト</string>
+    <string name="data_dtv">データ削除</string>
+    <string name="lang_tv">言語設定</string>
+    <string name="textView">会員加入</string>
+    <string name="email_et">Eメール</string>
+    <string name="et_id">アイディー</string>
+    <string name="password_et">パスワード</string>
+    <string name="signup_bt">会員加入</string>
+    <string name="kor">韓国語</string>
+    <string name="en">英語</string>
+    <string name="ja" >日本語</string>
+    <string name="bt_bluetooth">ブルートゥー</string>
+    <string name="back_h">後方</string>
+    <string name="del_btn">削除する</string>
+    <string name="his_btn">記録を見る</string>
+
+</resources>

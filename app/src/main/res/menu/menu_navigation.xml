@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/History"
+        android:title="HISTORY"
+        android:icon="@drawable/ic_history_24dp"/>
+    <item
+        android:id="@+id/Home"
+        android:title="HOME"
+        android:icon="@drawable/ic_home_black_24dp"/>
+
+    <item
+        android:id="@+id/Setting"
+        android:title="SETTINGS"
+        android:icon="@drawable/ic_settings_black_24dp"/>
+</menu>
