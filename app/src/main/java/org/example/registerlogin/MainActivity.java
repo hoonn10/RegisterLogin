@@ -330,21 +330,6 @@ public class MainActivity extends AppCompatActivity{
 //        });
 //    }
 
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == RESULT_OK) {
-
-            ArrayList<String> results = data
-                    .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-
-            String str = results.get(0);
-            Toast.makeText(getBaseContext(), str, Toast.LENGTH_SHORT).show();
-
-            TextView tv = findViewById(R.id.test_tv);
-            tv.setText(str);
-        }
-    }
 
     /*public void permissionCheck() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
@@ -374,8 +359,8 @@ public class MainActivity extends AppCompatActivity{
                             Log.d(TAG, "decibel" + decibel);
                             if (decibel >= 65) {
                                 recordAudio();
-                                VoiceTask voiceTask = new VoiceTask();
-                                voiceTask.execute();
+//                                VoiceTask voiceTask = new VoiceTask();
+//                                voiceTask.execute();
 
                                 try {
                                     Thread.sleep(20000);
@@ -486,8 +471,6 @@ public class MainActivity extends AppCompatActivity{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
     private double getAmplitude() {
@@ -568,14 +551,33 @@ public class MainActivity extends AppCompatActivity{
     private void getVoice() {
 
         Intent intent = new Intent();
+        //음성 인식 행위에 대한 액티비티를 실행시킬 수 있는 인텐트 객체 생성
         intent.setAction(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+
+        //음성 인식기에 대한 언어 모델 정보를 실행될 엑티비티에 전달
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
 
         String language = "ko-KR";
 
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, language);
+        //음성 인식기에 대한 언어 정보를 실행될 액티비티에 전달달
+       intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, language);
         startActivityForResult(intent, 2);
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+            //사용자의 음성을 인식하고 해석한 결과 string 객체로 반환
+            ArrayList<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+            String str = results.get(0);
+            Toast.makeText(getBaseContext(), str, Toast.LENGTH_SHORT).show();
+
+            TextView tv = findViewById(R.id.test_tv);
+            tv.setText(str);
+        }
     }
 
 }
